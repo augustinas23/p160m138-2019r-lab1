@@ -1,6 +1,10 @@
 import sys
-def greet(name: str):
-		print( f"Hello, {name}")
-greet (name=sys.argv[1])
+def greet(name: str, shout_count: int = 1):
+		print( f"Hello, {name}{shout_count*'!'}")
+if len (sys.argv)>2:
+	greet(name=sys.argv[1], shout_count=int(sys.argv[2]))
+elif len (sys.argv)<=2:
+	greet(name=sys.argv[1], shout_count=1)
+
 
 
