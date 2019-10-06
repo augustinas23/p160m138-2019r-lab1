@@ -1,2 +1,6 @@
-print ("Hello, everyone!")
+import sys
+def greet(name: str):
+		print( f"Hello, {name}")
+greet (name=sys.argv[1])
+
 
